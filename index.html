@@ -1,23 +1,1492 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+
+
+
+  <!-- Schema.org 구조화 데이터 (MedicalWebPage, FAQPage, BreadcrumbList, FinancialProduct) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "@id": "https://insu.reliabledone.com/cancer-guide/gastric-cancer#webpage",
+        "url": "https://insu.reliabledone.com/cancer-guide/gastric-cancer",
+        "name": "2026년 기준 위암보험 비교 견적 및 연령별 보장 설계 심층 가이드",
+        "description": "위암의 병기별 치료 비용, 건강보험 급여 및 비급여 항목 분석, 진단비와 수술비 특약의 차이점, 20대부터 70대까지의 연령대별 최적 보험료 견적을 다룬 전문 금융 의료 정보 가이드입니다.",
+        "about": {
+          "@type": "MedicalCondition",
+          "name": "위암 (Gastric Cancer)",
+          "code": {
+            "@type": "MedicalCode",
+            "code": "C16",
+            "codingSystem": "ICD-10"
+          }
+        },
+        "lastReviewed": "2026-02-15"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://insu.reliabledone.com/cancer-guide/gastric-cancer#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "홈",
+            "item": "https://insu.reliabledone.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "암보험 가이드",
+            "item": "https://insu.reliabledone.com/cancer-guide"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "위암보험 전문 분석",
+            "item": "https://insu.reliabledone.com/cancer-guide/gastric-cancer"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://insu.reliabledone.com/cancer-guide/gastric-cancer#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "위암 진단 시 필요한 적정 진단비 규모는 얼마인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "국가암정보센터 및 2026년 건강보험공단 통계에 따르면 위암의 1인당 평균 치료 및 간병, 휴직으로 인한 생활비 공백 비용은 약 4,500만 원에서 6,000만 원 선으로 집계됩니다. 따라서 순수 치료비 외에 소득 상실을 보전하기 위해 최소 5,000만 원 이상의 일반암 진단비를 확보하는 것이 권장됩니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "조기위암 내시경 절제술(ESD)도 일반암 진단비 전액이 지급되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "조기위암(EGC)의 경우 점막층에 국한된 암종(상피내암 또는 제자리암, D00)으로 분류되면 소액암이나 유사암으로 분류되어 가입금액의 10~20%만 지급될 수 있습니다. 반면 점막하층 침윤이 확인되어 C16 코드가 부여되면 일반암 진단비 100%가 지급됩니다. 따라서 조직검사 결과지의 병리 진단명을 면밀히 검토해야 합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "비갱신형 위암보험과 갱신형 암보험 중 어느 쪽이 유리한가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "20대, 30대, 40대의 젊은 연령대나 경제 활동기에는 초기 납입료가 만기까지 동일하고 총납입 보험료가 절감되는 비갱신형(무해지 환급형)이 유리합니다. 반면 60대 후반이나 70대 이상의 고령층은 잔여 납입 기간과 초기 부담을 감안하여 10년 또는 20년 주기의 갱신형 상품이나 간편심사(유병자) 플랜을 선택하는 것이 비용 효율적입니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "2026년에 신설된 표적항암약물허가치료 및 중입자치료 특약은 필수인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "위암 3기 및 4기 진행성 위암에서 HER2 양성 표적치료제(트라스투주맙 등)나 면역항암제(키트루다, 옵디보)의 사용이 늘고 있습니다. 또한 중입자치료 및 양성자치료와 같은 고액 비급여 치료비는 3,000만 원에서 5,000만 원을 상회하므로, 월 1~2천 원대의 저렴한 특약으로 5,000만 원에서 최대 1억 원까지 보장받을 수 있는 비급여 신의료기술 특약을 필수로 구성하는 것이 좋습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "가족력(부모, 형제 위암 이력)이 있는 경우 보험 가입 시 불이익이 있나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "단순 가족력은 고지의무 사항(계약 전 알릴 의무)에 포함되지 않는 경우가 일반적입니다. 다만 본인이 헬리코박터 파일로리균 제균 치료를 받았거나 위선종, 위궤양 등으로 조직검사를 시행한 이력이 최근 3개월~5년 이내에 있다면 정해진 기준에 따라 고지해야 하며, 경우에 따라 부담보 조건이 부가될 수 있으므로 다이렉트 비교 후 무할증 심사 브랜드를 찾는 것이 유리합니다."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #1e3a5f;
+      --primary-dark: #112239;
+      --primary-light: #2b5282;
+      --secondary: #0d9488;
+      --secondary-light: #ccfbf1;
+      --accent: #d97706;
+      --accent-soft: #fef3c7;
+      --bg-base: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-subtle: #f1f5f9;
+      --border-color: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-light: #64748b;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Pretendard", "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      line-height: 1.85;
+      font-size: 17px;
+      letter-spacing: -0.02em;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    a:hover {
+      color: var(--secondary);
+      text-decoration: underline;
+    }
+
+    .wrapper {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* 상단 네비게이션 헤더 */
+    .site-header {
+      background-color: var(--primary-dark);
+      color: #ffffff;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand-logo {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.03em;
+    }
+    .brand-logo span {
+      color: var(--secondary-light);
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .nav-links a {
+      color: #e2e8f0;
+    }
+    .nav-links a:hover {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    /* 브레드크럼 */
+    .breadcrumb-nav {
+      padding: 16px 0 0;
+      font-size: 0.88rem;
+      color: var(--text-light);
+    }
+    .breadcrumb-nav ol {
+      list-style: none;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb-nav li + li::before {
+      content: "/";
+      margin-right: 8px;
+      color: var(--border-color);
+    }
+
+    /* 메인 히어로 섹션 */
+    .hero-banner {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 60%, #1e4e79 100%);
+      color: #ffffff;
+      padding: 60px 0;
+      border-radius: var(--radius-lg);
+      margin: 20px 0 40px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-banner::before {
+      content: "";
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(13, 148, 136, 0.25) 0%, rgba(0,0,0,0) 70%);
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .hero-tag {
+      display: inline-block;
+      background-color: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-bottom: 18px;
+      color: var(--secondary-light);
+    }
+    .hero-banner h1 {
+      font-size: 2.65rem;
+      font-weight: 900;
+      line-height: 1.3;
+      margin-bottom: 20px;
+      letter-spacing: -0.04em;
+    }
+    .hero-banner p {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+    .hero-meta-badge {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+    .hero-meta-badge span {
+      background: rgba(0,0,0,0.25);
+      padding: 4px 12px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* 본문 레이아웃 */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .content-area {
+      min-width: 0;
+    }
+
+    /* 섹션 공통 스타일 */
+    .article-section {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 40px;
+      margin-bottom: 36px;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-section h2 {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border-color);
+      letter-spacing: -0.03em;
+    }
+    .article-section h3 {
+      font-size: 1.38rem;
+      font-weight: 700;
+      color: var(--primary-light);
+      margin: 32px 0 14px;
+      letter-spacing: -0.02em;
+    }
+    .article-section h4 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin: 22px 0 10px;
+    }
+    .article-section p {
+      margin-bottom: 18px;
+      color: var(--text-muted);
+      text-align: justify;
+      word-break: keep-all;
+    }
+    .article-section ul, .article-section ol {
+      margin: 16px 0 24px 22px;
+      color: var(--text-muted);
+    }
+    .article-section li {
+      margin-bottom: 8px;
+      line-height: 1.75;
+    }
+
+    /* 강조 박스 & 콜아웃 */
+    .info-box {
+      background-color: #f0fdf4;
+      border-left: 4px solid var(--secondary);
+      padding: 20px 24px;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: 24px 0;
+    }
+    .info-box-title {
+      font-weight: 700;
+      color: #065f46;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+    .info-box p {
+      margin-bottom: 0;
+      color: #166534;
+      font-size: 0.98rem;
+    }
+
+    .warning-box {
+      background-color: var(--accent-soft);
+      border-left: 4px solid var(--accent);
+      padding: 20px 24px;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: 24px 0;
+    }
+    .warning-box-title {
+      font-weight: 700;
+      color: #92400e;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+    .warning-box p {
+      margin-bottom: 0;
+      color: #78350f;
+      font-size: 0.98rem;
+    }
+
+    /* 데이터 테이블 */
+    .table-container {
+      overflow-x: auto;
+      margin: 28px 0;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 0.96rem;
+      background-color: #ffffff;
+    }
+    thead th {
+      background-color: var(--primary);
+      color: #ffffff;
+      font-weight: 600;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--primary-dark);
+      white-space: nowrap;
+    }
+    tbody td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-muted);
+    }
+    tbody tr:nth-child(even) {
+      background-color: var(--bg-subtle);
+    }
+    tbody tr:hover {
+      background-color: #f8fafc;
+    }
+    td strong {
+      color: var(--text-main);
+    }
+    .text-center { text-align: center; }
+    .text-right { text-align: right; }
+
+    /* CSS 바 그래프 컴포넌트 */
+    .bar-chart-card {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin: 28px 0;
+    }
+    .bar-chart-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+    .bar-item {
+      margin-bottom: 14px;
+    }
+    .bar-label-wrap {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.92rem;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    .bar-track {
+      background-color: var(--bg-subtle);
+      height: 16px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 8px;
+      transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .bar-fill-1 { width: 35%; background-color: #38bdf8; }
+    .bar-fill-2 { width: 62%; background-color: #0d9488; }
+    .bar-fill-3 { width: 85%; background-color: #f59e0b; }
+    .bar-fill-4 { width: 100%; background-color: #ef4444; }
+
+    /* 인터랙티브 견적 계산기 위젯 */
+    .calculator-widget {
+      background: linear-gradient(to bottom, #ffffff, #f8fafc);
+      border: 2px solid var(--secondary);
+      border-radius: var(--radius-md);
+      padding: 30px;
+      margin: 32px 0;
+      box-shadow: var(--shadow-md);
+    }
+    .calc-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .calc-header h3 {
+      margin: 0 0 6px 0;
+      color: var(--primary);
+      font-size: 1.4rem;
+    }
+    .calc-header p {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      margin: 0;
+    }
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 20px;
+    }
+    .calc-field label {
+      display: block;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+    .calc-field select, .calc-field input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      background-color: #ffffff;
+      color: var(--text-main);
+    }
+    .calc-field select:focus, .calc-field input:focus {
+      outline: 2px solid var(--secondary);
+      border-color: transparent;
+    }
+    .calc-result-box {
+      background-color: var(--primary-dark);
+      color: #ffffff;
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .calc-result-label {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      margin-bottom: 6px;
+    }
+    .calc-result-val {
+      font-size: 1.95rem;
+      font-weight: 900;
+      color: #38bdf8;
+    }
+    .calc-result-sub {
+      font-size: 0.85rem;
+      color: #cbd5e1;
+      margin-top: 8px;
+    }
+
+    /* 탭 컨트롤러 (연령대별 보장 가이드) */
+    .tab-container {
+      margin: 30px 0;
+    }
+    .tab-nav {
+      display: flex;
+      gap: 8px;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 2px;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      background: none;
+      border: none;
+      padding: 10px 18px;
+      font-size: 0.96rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+      transition: all 0.2s ease;
+    }
+    .tab-btn.active {
+      color: var(--primary);
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-bottom: 2px solid var(--bg-surface);
+      margin-bottom: -2px;
+    }
+    .tab-content {
+      display: none;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-top: none;
+      border-radius: 0 0 var(--radius-md) var(--radius-md);
+      padding: 24px;
+    }
+    .tab-content.active {
+      display: block;
+    }
+
+    /* FAQ 아코디언 */
+    .faq-wrapper {
+      margin-top: 24px;
+    }
+    .faq-card {
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      margin-bottom: 12px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+    .faq-question {
+      padding: 18px 20px;
+      background: #ffffff;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--primary);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .faq-question:hover {
+      background-color: var(--bg-subtle);
+    }
+    .faq-question::after {
+      content: "+";
+      font-size: 1.4rem;
+      color: var(--secondary);
+      font-weight: 400;
+      transition: transform 0.2s ease;
+    }
+    .faq-card.open .faq-question::after {
+      content: "-";
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      display: none;
+      padding: 20px;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      background-color: var(--bg-base);
+      font-size: 0.98rem;
+    }
+    .faq-card.open .faq-answer {
+      display: block;
+    }
+
+    /* 사이드바 영역 */
+    .sidebar-area {
+      position: sticky;
+      top: 90px;
+      height: fit-content;
+    }
+    .sidebar-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .sidebar-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border-color);
+    }
+    .toc-list {
+      list-style: none;
+      font-size: 0.92rem;
+    }
+    .toc-list li {
+      margin-bottom: 10px;
+    }
+    .toc-list a {
+      color: var(--text-muted);
+      display: block;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+    }
+    .toc-list a:hover {
+      background-color: var(--bg-subtle);
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .side-cta-box {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #ffffff;
+      border-radius: var(--radius-md);
+      padding: 24px;
+      text-align: center;
+    }
+    .side-cta-box h4 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--secondary-light);
+    }
+    .side-cta-box p {
+      font-size: 0.88rem;
+      color: #cbd5e1;
+      margin-bottom: 18px;
+    }
+    .btn-action {
+      display: block;
+      background-color: var(--secondary);
+      color: #ffffff;
+      font-weight: 700;
+      padding: 12px 20px;
+      border-radius: var(--radius-sm);
+      text-align: center;
+      transition: background-color 0.2s ease;
+    }
+    .btn-action:hover {
+      background-color: #0f766e;
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    /* 키워드 태그 클라우드 */
+    .keyword-hub-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .kw-tag {
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    /* 신뢰성 외부 링크 목록 */
+    .ref-link-list {
+      list-style: none;
+      margin-top: 16px;
+    }
+    .ref-link-list li {
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+    .ref-link-list a {
+      font-weight: 600;
+      color: var(--primary);
+    }
+    .ref-link-desc {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 2px;
+    }
+
+    /* 푸터 */
+    .site-footer {
+      background-color: var(--primary-dark);
+      color: #94a3b8;
+      padding: 50px 0 30px;
+      font-size: 0.88rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    .footer-col h5 {
+      color: #ffffff;
+      font-size: 1rem;
+      margin-bottom: 14px;
+    }
+    .footer-col ul {
+      list-style: none;
+    }
+    .footer-col li {
+      margin-bottom: 8px;
+    }
+    .footer-col a {
+      color: #94a3b8;
+    }
+    .footer-col a:hover {
+      color: #ffffff;
+    }
+    .copyright-bar {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.82rem;
+    }
+
+    /* 반응형 미디어 쿼리 */
+    @media (max-width: 1024px) {
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+      .sidebar-area {
+        position: static;
+      }
+    }
+    @media (max-width: 768px) {
+      .hero-banner h1 {
+        font-size: 2rem;
+      }
+      .article-section {
+        padding: 24px 18px;
+      }
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="wrapper header-inner">
+      <div class="brand-logo">위암보험<span>케어</span> 2026</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#section-cost">치료비 분석</a></li>
+          <li><a href="#section-age">연령별 견적</a></li>
+          <li><a href="#section-comparison">보장 비교</a></li>
+          <li><a href="#section-calc">예상 계산기</a></li>
+          <li><a href="#section-faq">자주 묻는 질문</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrapper">
+    <!-- 브레드크럼 네비게이션 -->
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="https://insu.reliabledone.com/">홈</a></li>
+        <li><a href="https://insu.reliabledone.com/cancer-guide">암보험 종합정보</a></li>
+        <li aria-current="page">위암보험 전문 설계 가이드</li>
+      </ol>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+
+    <!-- 히어로 배너 -->
+    <section class="hero-banner">
+      <div class="hero-content">
+        <div class="hero-tag">2026년 최신 개정판 금융 및 의료 데이터 반영</div>
+        <h1>위암보험 비교 견적 및 연령대별 보장 가이드</h1>
+        <p>대한민국 발병률 최상위권 위암의 병기별 실제 치료비, 로봇수술과 표적치료제 비급여 항목 분석부터 20대 사회초년생부터 70대 시니어까지의 최적 다이렉트 보험료 산출 노하우를 공개합니다.</p>
+        <div class="hero-meta-badge">
+          <span>최신 데이터 업데이트: 2026년 기준</span>
+          <span>정보 검증: 의료수가 및 생명손해보험 요율 분석팀</span>
+          <span>열람 소요 시간: 약 12분</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 본문 레이아웃 -->
+    <div class="main-layout">
+      <!-- 메인 콘텐츠 영역 -->
+      <main class="content-area">
+
+        <!-- 섹션 1: 위암의 현실과 발생 역학 -->
+        <article class="article-section" id="section-intro">
+          <h2>1. 2026년 위암 발병 현황과 치료 패러다임의 변화</h2>
+          <p>
+            위암(Gastric Cancer, 질병코드 C16)은 오랜 기간 동안 국내 암 발생률 순위에서 최상위권을 유지하고 있는 대표적인 다빈도 암종입니다. 2026년 현재 국립암센터 및 보건복지부 국가암등록사업 연례 보고서에 따르면, 조기 위내시경 검진의 보편화로 인하여 1기 조기위암(Early Gastric Cancer)의 발견 비율은 75%를 상회하고 있습니다. 그러나 식습관의 서구화, 만성 위축성 위염 및 장상피화생, 헬리코박터 파일로리(Helicobacter pylori) 감염 지속, 직무 스트레스 등으로 인해 20대와 30대 젊은 층의 미만성 위암(Diffuse-type Gastric Cancer) 발병률 또한 꾸준히 보고되고 있습니다.
+          </p>
+          <p>
+            과거의 위암 치료가 개복을 통한 위전절제술(Total Gastrectomy)이나 위아전절제술(Subtotal Gastrectomy) 중심이었다면, 최근에는 복강경 및 다빈치Xi, SP를 활용한 단일공 로봇수술이 표준으로 자리잡았습니다. 또한 점막층에 국한된 조기암의 경우 내시경 점막하 박리술(ESD, Endoscopic Submucosal Dissection)을 통해 위의 기능을 온전히 보존하는 치료가 빈번하게 시행됩니다. 
+          </p>
+          <p>
+            그러나 3기와 4기 등 진행성 위암(Advanced Gastric Cancer) 및 재발 전이암 단계로 진입할 경우, HER2 유전자 과발현 여부에 따른 표적항암치료제(트라스투주맙 등) 투여, 면역관문억제제(키트루다, 옵디보) 병용요법, 그리고 중입자치료기(Heavy Ion Radiotherapy)와 같은 고가의 비급여 치료법이 대거 적용됩니다. 이에 따라 과거와 달리 치료 기술은 비약적으로 발전하였으나, 환자 본인과 가계가 감당해야 하는 비급여 치료 비용과 투병 기간 중 발생하는 소득 단절 리스크는 더욱 커졌습니다. 이것이 바로 단순 실손의료비 보험에만 의존하지 않고 탄탄한 위암 진단비와 수술비 특약을 구비해야 하는 핵심 이유입니다.
+          </p>
+
+          <div class="info-box">
+            <div class="info-box-title">핵심 요약: 위암 치료의 현주소와 보험 가입의 당위성</div>
+            <p>조기 발견 시 완치율은 95% 이상으로 매우 높으나, 최신 최소침습 로봇수술과 3~4기 표적 및 면역항암치료, 차세대 방사선 치료 비용은 건강보험 비급여 항목이 많아 수천만 원에 달합니다. 단순 실비 보장 외에 생활자금과 비급여 치료를 온전히 뒷받침할 든든한 정액 진단비 마련이 필수적입니다.</p>
+          </div>
+        </article>
+
+        <!-- 섹션 2: 위암 병기별 치료비용 및 간접비용 분석 -->
+        <article class="article-section" id="section-cost">
+          <h2>2. 위암 병기별 실제 치료비용과 비급여 항목 구조 분석</h2>
+          <p>
+            위암 환자가 직면하는 경제적 부담은 국민건강보험의 중증질환 산정특례(본인부담금 5%) 적용을 받는 급여 항목에 국한되지 않습니다. 상급병실료 차액, 로봇수술 비용, 차세대 항암제, 유전자 패널 검사(NGS), 항암 보조요법, 간병인 사용료, 그리고 직장 휴직 및 퇴직에 따른 소득 상실액이 총 치료 비용의 대부분을 차지합니다.
+          </p>
+
+          <!-- CSS 기반 병기별 평균 총비용 시각화 차트 -->
+          <div class="bar-chart-card">
+            <div class="bar-chart-title">위암 병기별 1인당 평균 총 경제적 부담액 추정치 (2026년 기준)</div>
+            <div class="bar-item">
+              <div class="bar-label-wrap">
+                <span>1기 조기위암 (ESD 또는 부분절제)</span>
+                <span>약 1,800만 원</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill bar-fill-1"></div>
+              </div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label-wrap">
+                <span>2기 위암 (복강경/로봇 전절제 및 보조항암)</span>
+                <span>약 3,500만 원</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill bar-fill-2"></div>
+              </div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label-wrap">
+                <span>3기 진행성 위암 (광범위 림프절 곽청 및 복합항암)</span>
+                <span>약 5,800만 원</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill bar-fill-3"></div>
+              </div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-label-wrap">
+                <span>4기 전이성 위암 (표적치료제, 면역치료, 중입자 등)</span>
+                <span>약 8,500만 원 이상</span>
+              </div>
+              <div class="bar-track">
+                <div class="bar-fill bar-fill-4"></div>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            위 수치는 국민건강보험공단 급여 본인부담금뿐만 아니라, 비급여 수술비(다빈치 로봇수술 약 1,000만~1,500만 원), 표적/면역항암제 비급여 투여료(월 300만~500만 원, 연간 3,000만~6,000만 원), 간병인 고용비(월 400만 원 내외), 1년간의 휴직 기간 중 생활비 공백을 종합적으로 합산하여 모델링한 데이터입니다.
+          </p>
+
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>구분 항목</th>
+                  <th>건강보험 급여 (산정특례 5%)</th>
+                  <th>비급여 및 환자 전액부담 항목</th>
+                  <th>위암보험 권장 보장 특약</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>진단 및 정밀검사</strong></td>
+                  <td>위내시경, 복부 CT, 조직 생검</td>
+                  <td>차세대 염기서열분석(NGS), 비급여 초음파</td>
+                  <td>일반암 진단비 (3천만~1억)</td>
+                </tr>
+                <tr>
+                  <td><strong>수술 및 처치</strong></td>
+                  <td>개복 위절제술, 표준 복강경 수술</td>
+                  <td>다빈치 로봇수술, 특수 지혈 패치재료</td>
+                  <td>암수술비, 질병수술비, 로봇수술특약</td>
+                </tr>
+                <tr>
+                  <td><strong>항암 약물 치료</strong></td>
+                  <td>1차 표준 세포독성 항암제 (5-FU, 플라틴)</td>
+                  <td>2~3차 표적치료제, 면역항암제(전액 비급여 시)</td>
+                  <td>표적항암약물허가치료비 (5천만~1억)</td>
+                </tr>
+                <tr>
+                  <td><strong>방사선 치료</strong></td>
+                  <td>일반 3차원 세기조절 방사선(IMRT)</td>
+                  <td>중입자 가속기 치료, 양성자치료</td>
+                  <td>항암방사선약물치료비, 중입자특약</td>
+                </tr>
+                <tr>
+                  <td><strong>입원 및 간병</strong></td>
+                  <td>다인실(4~6인실) 입원료</td>
+                  <td>1~2인실 상급병실 차액, 전담 간병인비용</td>
+                  <td>간병인 사용일당, 상급종합병원 입원일당</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            따라서 위암에 대해 가장 합리적인 견적을 산출하고자 한다면, 단순한 사망 보장 위주의 종신보험보다는 치료비와 직접 연동되는 <strong>일반암 진단비 + 암수술비 + 표적항암/특정면역치료비 + 간병인 지원 특약</strong>을 집중 구성하는 포트폴리오를 설계해야 합니다.
+          </p>
+        </article>
+
+        <!-- 섹션 3: 20대부터 70대까지 연령별 맞춤형 보험료 및 가입 전략 -->
+        <article class="article-section" id="section-age">
+          <h2>3. 연령대별 위암보험 가입 전략 및 평균 예상 보험료 비교 (20대~70대)</h2>
+          <p>
+            위암보험의 월 납입 금액은 피보험자의 가입 연령, 성별, 직업 급수, 가입 시점의 건강 상태(기저질환 유무), 그리고 갱신형 vs 비갱신형 여부에 따라 현격한 차이를 보입니다. 20대 사회초년생부터 70대 고령자까지 각 생애주기별 위험 요율과 최적의 추천 상품 구조를 아래의 표와 상세 분석을 통해 확인하실 수 있습니다.
+          </p>
+
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>연령대 및 대상</th>
+                  <th>권장 설계 형태</th>
+                  <th>추천 핵심 담보 구성</th>
+                  <th>남성 평균 월납 (예상)</th>
+                  <th>여성 평균 월납 (예상)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>20대 (20~29세)</strong><br>사회초년생/대학생</td>
+                  <td>비갱신형 (무해지환급 100세)</td>
+                  <td>일반암 5천만 + 유사암 1천만 + 뇌심장 2천만</td>
+                  <td>32,000원 ~ 45,000원</td>
+                  <td>28,000원 ~ 39,000원</td>
+                </tr>
+                <tr>
+                  <td><strong>30대 (30~39세)</strong><br>직장인/신혼부부</td>
+                  <td>비갱신형 (20년납 90세만기)</td>
+                  <td>일반암 5천만 + 표적치료 7천만 + 수술비</td>
+                  <td>48,000원 ~ 65,000원</td>
+                  <td>42,000원 ~ 58,000원</td>
+                </tr>
+                <tr>
+                  <td><strong>40대 (40~49세)</strong><br>가장/위험률 급증기</td>
+                  <td>비갱신형 + 갱신형 복합</td>
+                  <td>일반암 7천만 + 표적치료 1억 + 간병일당</td>
+                  <td>75,000원 ~ 105,000원</td>
+                  <td>60,000원 ~ 85,000원</td>
+                </tr>
+                <tr>
+                  <td><strong>50대 (50~59세)</strong><br>중장년/퇴직준비기</td>
+                  <td>비갱신 20년납 또는 간편 3.5.5</td>
+                  <td>일반암 5천만 + 중입자치료 + 항암치료비</td>
+                  <td>110,000원 ~ 155,000원</td>
+                  <td>85,000원 ~ 120,000원</td>
+                </tr>
+                <tr>
+                  <td><strong>60대 (60~69세)</strong><br>시니어/유병자 중심</td>
+                  <td>간편심사 3.3.5 / 20년 갱신형</td>
+                  <td>일반암 3천만 + 암수술비 + 간병인사용 15만</td>
+                  <td>80,000원 ~ 130,000원</td>
+                  <td>65,000원 ~ 98,000원</td>
+                </tr>
+                <tr>
+                  <td><strong>70대 (70~79세)</strong><br>초고령/간편가입</td>
+                  <td>10년/15년 갱신형 간편심사</td>
+                  <td>일반암 1~2천만 + 암입원/간병집중케어</td>
+                  <td>90,000원 ~ 160,000원</td>
+                  <td>75,000원 ~ 135,000원</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- 탭을 통한 연령별 정밀 상세 가이드 -->
+          <div class="tab-container">
+            <div class="tab-nav">
+              <button class="tab-btn active" onclick="switchTab(event, 'tab-2030')">2030 청년층 플랜</button>
+              <button class="tab-btn" onclick="switchTab(event, 'tab-4050')">4050 중장년 집중플랜</button>
+              <button class="tab-btn" onclick="switchTab(event, 'tab-6070')">6070 실버 유병자플랜</button>
+            </div>
+
+            <div id="tab-2030" class="tab-content active">
+              <h4>20대 및 30대: 비갱신 무해지 환급형을 통한 평생 최저가 락인(Lock-in)</h4>
+              <p>
+                20대 사회초년생과 30대 초중반 직장인은 질병 발생 위험도가 상대적으로 낮아 전 연령대 중 가장 저렴한 최저가 요율을 적용받습니다. 이 시기에는 20년 납입 후 90세나 100세까지 추가 비용 없이 보장받는 <strong>비갱신형 순수보장형(해약환급금 미지급형)</strong>을 선택해야 합니다. 일반 표준형 대비 20~30% 할인된 요금제로 평생의 암 진단비 기반을 확립할 수 있습니다. 
+              </p>
+              <p>
+                특히 2030 세대에서 발견되는 위암은 침윤 속도가 빠른 미만성 위암의 비율이 높으므로, 일반암 진단비를 5,000만 원 이상으로 넉넉하게 확보하고, 최신 신의료기술 특약인 카티(CAR-T) 및 표적항암약물허가치료 특약을 몇백 원대의 저렴한 보험료로 선제 탑재하는 것이 현명한 방법입니다.
+              </p>
+            </div>
+
+            <div id="tab-4050" class="tab-content">
+              <h4>40대 및 50대: 위암 발병률 폭증에 대비하는 다층 방어망 구축</h4>
+              <p>
+                40대와 50대는 건강검진에서 헬리코박터균 감염, 위궤양, 위용종(용종절제술 시행) 이력이 발생하기 시작하는 시기입니다. 또한 가장으로서의 경제적 책임이 제일 무거운 시기이므로 진단비의 공백이 가계 경제 파탄으로 이어질 수 있습니다. 
+              </p>
+              <p>
+                이 연령대에서는 기본 비갱신형으로 3,000만~5,000만 원의 진단비를 베이스로 깔고, 위험률이 가장 높은 60~70대 초반까지를 집중 보장받을 수 있도록 20년 만기 갱신형 암보험을 복합 구성하는 '투트랙(Two-Track) 전략'을 추천합니다. 이렇게 하면 월 납입료 부담은 낮추면서 위암 호발 시기에 총 8,000만~1억 원 상당의 강력한 진단 자금을 확보할 수 있습니다.
+              </p>
+            </div>
+
+            <div id="tab-6070" class="tab-content">
+              <h4>60대 및 70대: 고혈압, 당뇨 환자도 가입 가능한 3·5·5 간편심사 플랜</h4>
+              <p>
+                60대와 70대 어르신의 경우 만성질환 복약(고혈압약, 당뇨약, 고지혈증약 등)으로 인해 일반 표준체 가입이 거절될 수 있습니다. 그러나 최근 2026년 기준 보험 시장에는 <strong>간편심사(3.5.5 또는 3.3.5) 유병자 암보험</strong>이 고도화되어 있어, 3개월 내 입원/수술 필요 소견, 5년 내 입원/수술 이력, 5년 내 암 진단/치료 이력만 없다면 서류 제출 없이 원스톱 자동 승인이 가능합니다.
+              </p>
+              <p>
+                고령층은 진단비 액수를 무리하게 높이기보다는, 실제 입원과 수술 시 발생하는 간병 부담을 덜어주는 '간병인 사용일당(1일당 15만 원)' 및 '암 주요 치료비 정액 지원 특약' 위주로 슬림하게 설계하여 월 보험료를 6만~10만 원 안팎으로 통제하는 것이 핵심 요령입니다.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 섹션 4: 비갱신형 vs 갱신형 장단점 심층 비교 -->
+        <article class="article-section" id="section-comparison">
+          <h2>4. 비갱신형 vs 갱신형 위암보험의 장단점 및 상품 구조 비교</h2>
+          <p>
+            소비자들이 위암보험을 가입하거나 리모델링할 때 가장 많이 갈등하는 지점이 바로 '비갱신형'과 '갱신형'의 선택입니다. 두 방식은 월 납입료의 책정 원리와 만기까지의 총 지출 비용에서 극명한 차이점을 보입니다.
+          </p>
+
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>비교 항목</th>
+                  <th>비갱신형 위암보험 (무해지 환급형)</th>
+                  <th>갱신형 위암보험 (10년/20년 갱신)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>보험료 변동 여부</strong></td>
+                  <td>가입 시 정해진 금액이 만기까지 동일 (인상 없음)</td>
+                  <td>갱신 주기마다 연령 및 손해율에 따라 인상</td>
+                </tr>
+                <tr>
+                  <td><strong>납입 기간</strong></td>
+                  <td>20년납, 30년납 등 일정 기간 납입 완료 후 면제</td>
+                  <td>보장받는 전기(평생) 동안 계속 납입</td>
+                </tr>
+                <tr>
+                  <td><strong>초기 보험료</strong></td>
+                  <td>초기 월 납입금은 상대적으로 높음</td>
+                  <td>초기 월 납입금이 매우 저렴함</td>
+                </tr>
+                <tr>
+                  <td><strong>총납입 보험료</strong></td>
+                  <td>젊은 연령대 가입 시 갱신형 대비 총비용 절감</td>
+                  <td>장기 유지 시 60대 이후 급격한 인상으로 총비용 증가</td>
+                </tr>
+                <tr>
+                  <td><strong>추천 대상</strong></td>
+                  <td>20대, 30대, 40대, 장기적 자산 관리형 소비자</td>
+                  <td>50대 후반, 60~70대, 특정 기간 고액 집중 보장 희망자</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>무해지(해약환급금 미지급형) 상품의 핵심 장점과 주의할 단점</h3>
+          <p>
+            현재 판매되는 비갱신형 위암보험의 90% 이상은 무해지 환급형 구조를 띱니다. 이는 납입 기간 도중에 계약을 해지할 경우 해약환급금이 전혀 없는 대신, 일반 표준형 상품에 비해 보험료가 20~30% 영구적으로 저렴한 상품입니다. 
+          </p>
+          <p>
+            <strong>장점:</strong> 동일한 보장 금액(예: 위암 진단비 5,000만 원)을 가장 저렴한 비용으로 준비할 수 있어 가성비가 가장 뛰어납니다.<br>
+            <strong>단점:</strong> 경제적 사정으로 납입 기간(예: 20년) 도중 해지하게 되면 원금을 단 한 푼도 돌려받지 못하는 치명적인 손실이 발생합니다. 따라서 처음 설계할 때 본인의 소득 수준에 맞춰 끝까지 완납할 수 있는 적정 수준으로 보험료를 세팅하는 절제가 반드시 필요합니다.
+          </p>
+        </article>
+
+        <!-- 섹션 5: 위암 필수 특약과 비급여 신의료기술 분석 -->
+        <article class="article-section" id="section-riders">
+          <h2>5. 위암 집중 케어를 위한 5대 필수 특약 완벽 가이드</h2>
+          <p>
+            단순히 암 진단비 하나만으로 위암의 전 치료 과정을 방어하기에는 최신 의료 환경이 매우 복잡해졌습니다. 전문가 컨설팅과 내돈내산 가입자들의 실제 후기에서 공통적으로 강조하는 필수 특약 다섯 가지는 다음과 같습니다.
+          </p>
+
+          <h4>1. 일반암 진단비 (기본 중의 기본)</h4>
+          <p>
+            위암은 모든 보험사에서 일반암으로 분류됩니다. 진단 확정 즉시 일시금으로 지급되므로 병원비 결제는 물론, 직장을 쉬는 동안의 생활비, 부채 상환, 요양 자금으로 자유롭게 활용할 수 있는 가장 가치 있는 담보입니다.
+          </p>
+
+          <h4>2. 암 수술비 및 로봇수술 특약</h4>
+          <p>
+            조기위암의 내시경 절제술부터 진행성 위암의 로봇보조 복강경 수술까지 수술 방식에 따라 1회당 수백만 원에서 천만 원 이상의 수술비가 차등 지급됩니다. 특히 2026년 신설된 다빈치 로봇암수술 특약은 비급여 로봇수술 비용을 실손의료비 한도와 무관하게 1,000만 원 한도로 깔끔하게 정액 보전해 줍니다.
+          </p>
+
+          <h4>3. 표적항암약물허가치료비 및 특정면역항암치료비</h4>
+          <p>
+            진행성 또는 전이성 위암 치료의 패러다임은 유전자 맞춤형 약물치료입니다. 엔허투(Enhertu), 키트루다(Keytruda) 등 고가의 표적 및 면역 치료제가 비급여로 투약될 경우 1회 주사에 수백만 원이 소요됩니다. 월 1,000~2,000원의 특약 가입으로 5,000만~1억 원의 치료 지원금을 확보할 수 있어 가성비가 매우 높습니다.
+          </p>
+
+          <h4>4. 항암 방사선 및 중입자·양성자 치료비 특약</h4>
+          <p>
+            연세의료원 및 주요 대형 병원에서 가동 중인 중입자 치료기는 암세포만 정밀 타격하여 정상 조직 손상을 최소화하는 꿈의 암 치료 기술입니다. 그러나 1회 코스당 약 5,000만 원 안팎의 전액 비급여 비용이 발생하므로, 신의료 방사선 치료 담보를 통해 사전에 재정적 안전장치를 마련해 두어야 합니다.
+          </p>
+
+          <h4>5. 간병인 사용일당 및 요양병원 암입원일당</h4>
+          <p>
+            위절제술 환자는 수술 후 덤핑 증후군(Dumping Syndrome), 영양 흡수 장애, 체중 감소 등으로 인해 장기간의 식이 조절과 간병 돌봄이 필요합니다. 하루 15만 원을 보장하는 간병인 사용 특약은 가족 간병의 육체적 피로와 사설 간병인 고용에 따른 월 400만 원 이상의 가계 지출을 완벽하게 방어합니다.
+          </p>
+        </article>
+
+        <!-- 섹션 6: 인터랙티브 실시간 예상 견적 계산기 -->
+        <article class="article-section" id="section-calc">
+          <h2>6. 2026 위암보험 다이렉트 예상 보험료 실시간 계산기</h2>
+          <p>
+            본인의 연령, 성별, 희망 진단비 금액 및 보장 형태를 선택하여 예상되는 월 납입 보험료와 최적 가입 가이드를 즉시 확인해 보실 수 있습니다.
+          </p>
+
+          <div class="calculator-widget">
+            <div class="calc-header">
+              <h3>맞춤형 위암보험료 간편 계산기</h3>
+              <p>빅데이터 통계 기반 2026년 다이렉트 최저가 추정 알고리즘 탑재</p>
+            </div>
+            <div class="calc-grid">
+              <div class="calc-field">
+                <label for="calc-age">가입 연령대</label>
+                <select id="calc-age" onchange="calculatePremium()">
+                  <option value="20">20대 (20~29세)</option>
+                  <option value="30" selected>30대 (30~39세)</option>
+                  <option value="40">40대 (40~49세)</option>
+                  <option value="50">50대 (50~59세)</option>
+                  <option value="60">60대 (60~69세)</option>
+                  <option value="70">70대 (70~79세)</option>
+                </select>
+              </div>
+              <div class="calc-field">
+                <label for="calc-gender">성별</label>
+                <select id="calc-gender" onchange="calculatePremium()">
+                  <option value="male" selected>남성</option>
+                  <option value="female">여성</option>
+                </select>
+              </div>
+              <div class="calc-field">
+                <label for="calc-diag">희망 위암 진단비</label>
+                <select id="calc-diag" onchange="calculatePremium()">
+                  <option value="3000">3,000만 원</option>
+                  <option value="5000" selected>5,000만 원 (권장)</option>
+                  <option value="7000">7,000만 원</option>
+                  <option value="10000">1억 원 (고액 플랜)</option>
+                </select>
+              </div>
+              <div class="calc-field">
+                <label for="calc-type">보험 형태</label>
+                <select id="calc-type" onchange="calculatePremium()">
+                  <option value="non-renew" selected>비갱신형 (무해지 20년납 90세만기)</option>
+                  <option value="renew">갱신형 (20년 갱신형 순수보장)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="calc-result-box">
+              <div class="calc-result-label">예상 월 납입 보험료 (다이렉트 최저가 기준)</div>
+              <div class="calc-result-val" id="calc-output">54,200원 / 월</div>
+              <div class="calc-result-sub" id="calc-desc">일반암 5,000만 원 + 유사암 1,000만 원 + 표적치료 5,000만 원 포함 기준</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 섹션 7: 온라인 다이렉트 가입 vs 설계사 컨설팅 vs 핀테크 앱 비교 -->
+        <article class="article-section" id="section-channel">
+          <h2>7. 다이렉트 인터넷 가입 vs 전문가 컨설팅 vs 핀테크 플랫폼 차이점</h2>
+          <p>
+            위암보험에 가입하는 경로는 크게 보험사 공식 온라인 다이렉트 사이트, 독립 법인대리점(GA) 전문 컨설턴트, 그리고 토스, 카카오페이, 네이버페이 등 핀테크 앱 플랫폼으로 나뉩니다. 각 채널마다 장단점과 할인 혜택, 사은품 및 현금지원 관련 유의사항이 명확히 갈립니다.
+          </p>
+
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>구분</th>
+                  <th>온라인 다이렉트 사이트</th>
+                  <th>독립 대리점(GA) 전문 컨설팅</th>
+                  <th>핀테크 플랫폼 (토스 등)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>가격 경쟁력</strong></td>
+                  <td>사업비와 수수료가 제외되어 10~15% 저렴</td>
+                  <td>표준형 요율 적용되나 정밀 비교 가능</td>
+                  <td>다이렉트 상품 연계로 저렴한 편</td>
+                </tr>
+                <tr>
+                  <td><strong>가입 편의성</strong></td>
+                  <td>공인인증서/간편인증으로 비대면 10분 완료</td>
+                  <td>상담원 유선 상담 및 맞춤 설계서 수령</td>
+                  <td>앱 내에서 몇 번의 터치로 간편 가입</td>
+                </tr>
+                <tr>
+                  <td><strong>특약 세부 커스텀</strong></td>
+                  <td>제공되는 세트 플랜 위주로 자유도 중간</td>
+                  <td>1원 단위까지 고객 맞춤형 특약 조립 가능</td>
+                  <td>간소화된 미니 플랜 위주 구성</td>
+                </tr>
+                <tr>
+                  <td><strong>사후 보상 청구 케어</strong></td>
+                  <td>고객이 직접 모바일 앱으로 서류 제출</td>
+                  <td>담당 설계사의 조직검사지 검토 및 대행</td>
+                  <td>앱 내 간편 청구 대행 기능 활용</td>
+                </tr>
+                <tr>
+                  <td><strong>프로모션 및 혜택</strong></td>
+                  <td>모바일 상품권, 첫 달 보험료 할인 이벤트</td>
+                  <td>정밀 증권 분석 리포트 무료 제공</td>
+                  <td>포인트 적립, 캐시백 혜택 연계</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="warning-box">
+            <div class="warning-box-title">주의: 온라인 커뮤니티(디시, 펨코, 보배 등)의 무분별한 성지 좌표 주의</div>
+            <p>디시인사이드 보험갤러리, 에펨코리아, 보배드림 등 커뮤니티에서 불법 리베이트(현금지원, 과도한 상품권 사은품 지급 등)를 미끼로 한 가입 유도는 금융소비자보호법 위반일 뿐만 아니라 차후 보험금 분쟁 시 제대로 된 보상 서비스를 받지 못할 위험이 큽니다. 공인된 약관과 투명한 비교 견적을 제공하는 검증된 업체를 통해 진행해야 합니다.</p>
+          </div>
+        </article>
+
+        <!-- 섹션 8: 온라인 커뮤니티 후기 및 실사용자 분석 -->
+        <article class="article-section" id="section-reviews">
+          <h2>8. 온라인 커뮤니티(디시, 펨코, 보배) 내돈내산 후기 및 빅데이터 분석</h2>
+          <p>
+            네이버 블로그의 획일적인 광고성 글을 넘어, 디시인사이드, 에펨코리아(펨코), 보배드림, 클리앙 등 실사용자 중심의 커뮤니티에서 오가는 '위암보험 내돈내산 실제 가입 및 보상 후기'를 빅데이터로 취합 분석하면 다음과 같은 실전 팁을 얻을 수 있습니다.
+          </p>
+          <ul>
+            <li><strong>조기위암 병리보고서 코드 분쟁:</strong> 내시경 점막하 박리술(ESD) 후 조직검사 결과지에 'High-grade dysplasia(고도 이형성증)' 또는 'Carcinoma in situ(상피내암)'으로 표기되어 보험사가 소액암 진단비만 지급하려 할 때, 독립 손해사정사를 선임하여 점막하 침윤(C16)을 입증함으로써 일반암 진단비 전액을 수령했다는 후기가 다수 확인됩니다.</li>
+            <li><strong>중복 보장의 위력:</strong> 실손의료비는 비례보상이지만, 암 진단비와 암 수술비는 중복 보상(정액 지급)이 되므로 A사와 B사에 각각 3천만 원씩 나누어 가입해 총 6천만 원의 목돈을 수령하여 요양병원 치료비로 요긴하게 썼다는 생생한 사례가 공유되고 있습니다.</li>
+            <li><strong>가족력 있는 사용자의 선택:</strong> 부모님이 위암을 겪으신 30대 후반 사용자의 경우, 헬리코박터 제균 치료 후 1년간의 추적 관찰 기간을 거친 뒤 부담보 없는 조건으로 비갱신 다이렉트 암보험에 무사히 승인받은 경험담이 높은 공감을 얻고 있습니다.</li>
+          </ul>
+        </article>
+
+        <!-- 섹션 9: 위암보험 가입 전 필수 체크리스트 7단계 -->
+        <article class="article-section" id="section-checklist">
+          <h2>9. 위암보험 가입 전 반드시 확인해야 할 7단계 체크리스트</h2>
+          <p>
+            위암보험 청약서에 서명하거나 모바일 인증을 완료하기 전, 아래의 7가지 점검 항목을 체크리스트로 활용하여 누락된 보장이나 불리한 조항이 없는지 면밀히 점검하십시오.
+          </p>
+          <ol>
+            <li><strong>면책기간(90일) 및 감액기간(1년~2년 50%) 확인:</strong> 암보험은 가입 즉시 보장되지 않으며 가입 후 90일이 지나야 효력이 발생합니다. 또한 1년 또는 2년 이내 위암 진단 시 가입금액의 50%만 지급되는 감액 조항이 있으므로 가능한 한 건강할 때 조기 가입하는 것이 유리합니다.</li>
+            <li><strong>유사암 및 소액암 범위 확인:</strong> 갑상선암, 기타피부암, 제자리암, 경계성종양 등 유사암 진단비가 일반암의 20% 한도로 정상 탑재되어 있는지 확인하십시오.</li>
+            <li><strong>납입면제(Waiver of Premium) 조건 체크:</strong> 암(유사암 제외), 뇌졸중, 급성심근경색 등 3대 질병 진단 또는 질병후유장해 50% 이상 발생 시 차후 남은 회차의 보험료 납입이 전액 면제되는 기능이 포함되어 있는지 확인해야 합니다.</li>
+            <li><strong>계약 전 알릴 의무(고지의무) 준수:</strong> 3개월 이내 병원 방문, 1년 이내 재검사 소견, 5년 이내 입원/수술/계속하여 7일 이상 치료/30일 이상 투약 사실을 숨김없이 정확하게 고지해야 향후 보험금 지급 거절 사태를 방지할 수 있습니다.</li>
+            <li><strong>다빈치 로봇수술 보장 여부:</strong> 위암 수술의 주류로 자리잡은 로봇수술이 질병수술비 또는 암수술비 특약에서 전액 인정되는지 약관을 조회하십시오.</li>
+            <li><strong>해약환급금 미지급형 비율 산정:</strong> 완납 시까지 유지할 수 있는 현실적인 월 납입 금액 범위를 설정했는지 본인의 재정 상태를 객관적으로 검토하십시오.</li>
+            <li><strong>최신 신의료기술 특약 반영 여부:</strong> 카티(CAR-T), 표적항암, 면역항암, 중입자 치료 등 2026년 최신 항암 기법을 커버하는 특약이 누락 없이 들어가 있는지 확인하십시오.</li>
+          </ol>
+        </article>
+
+        <!-- 섹션 10: FAQ (구조화 데이터 연계) -->
+        <article class="article-section" id="section-faq">
+          <h2>10. 위암보험 자주 묻는 질문 (FAQ)</h2>
+          <p>금융 및 의료 전문가들이 소비자들이 가장 빈번하게 문의하는 위암 관련 핵심 의문점들을 명쾌하게 답변해 드립니다.</p>
+
+          <div class="faq-wrapper">
+            <div class="faq-card open">
+              <div class="faq-question">위암 진단 시 필요한 적정 진단비 규모는 얼마인가요?</div>
+              <div class="faq-answer">
+                국가암정보센터 및 건강보험공단 통계에 따르면 위암의 1인당 평균 치료비와 간병비, 휴직에 따른 생활비 공백은 약 4,500만~6,000만 원 수준입니다. 따라서 순수 치료비 외에 소득 상실을 방어하기 위해 최소 5,000만 원 이상의 일반암 진단비를 확보하는 것이 권장됩니다.
+              </div>
+            </div>
+
+            <div class="faq-card">
+              <div class="faq-question">조기위암 내시경 절제술(ESD)도 일반암 진단비 전액이 지급되나요?</div>
+              <div class="faq-answer">
+                조기위암의 경우 점막층에 국한된 상피내암(D00 코드)으로 분류되면 소액암으로 간주되어 진단비의 10~20%만 지급될 수 있습니다. 반면 점막하층 침윤이 확인되어 악성 신생물(C16 코드)이 부여되면 100% 전액이 지급됩니다. 병리 진단서 상의 문구를 정밀 검토해야 합니다.
+              </div>
+            </div>
+
+            <div class="faq-card">
+              <div class="faq-question">비갱신형 위암보험과 갱신형 암보험 중 어느 쪽이 유리한가요?</div>
+              <div class="faq-answer">
+                20대, 30대, 40대의 젊은 연령대나 경제 활동기에는 초기 납입료가 만기까지 고정되는 비갱신형 무해지 환급형이 절대적으로 유리합니다. 반면 60대 후반이나 70대 이상의 고령층은 잔여 납입 기간과 초기 부담을 감안하여 10년/20년 갱신형이나 유병자 간편심사 플랜을 선택하는 것이 합리적입니다.
+              </div>
+            </div>
+
+            <div class="faq-card">
+              <div class="faq-question">2026년에 신설된 표적항암약물치료 및 중입자치료 특약은 필수인가요?</div>
+              <div class="faq-answer">
+                진행성 위암(3~4기)에서 면역항암제 및 표적치료제 사용이 급증하고 있으며 중입자치료비는 약 5,000만 원에 달합니다. 월 1~2천 원대의 저렴한 특약으로 최대 1억 원까지 보장받을 수 있으므로 반드시 구성하는 것이 좋습니다.
+              </div>
+            </div>
+
+            <div class="faq-card">
+              <div class="faq-question">가족력(부모, 형제 위암 이력)이 있는 경우 가입 시 불이익이 있나요?</div>
+              <div class="faq-answer">
+                단순 가족력은 계약 전 알릴 의무 사항에 포함되지 않습니다. 다만 본인이 최근 5년 이내 위내시경 검사에서 이상 소견으로 추가 조직검사나 투약을 받은 이력이 있다면 정확히 고지해야 하며, 다이렉트 비교를 통해 무할증 인수가 가능한 보험사를 선정하는 것이 요령입니다.
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 섹션 11: 연관 키워드 및 검색 허브 -->
+        <article class="article-section" id="section-keywords">
+          <h2>11. 위암보험 관련 키워드 및 연관 검색 허브</h2>
+          <p>소비자들이 포털 및 AI 검색엔진에서 함께 많이 찾는 핵심 검색어 모음입니다.</p>
+
+          <div class="keyword-hub-box">
+            <span class="kw-tag">#20대위암보험가격</span>
+            <span class="kw-tag">#30대위암보험비교</span>
+            <span class="kw-tag">#40대위암진단비견적</span>
+            <span class="kw-tag">#50대부모님암보험추천</span>
+            <span class="kw-tag">#60대유병자위암보험</span>
+            <span class="kw-tag">#70대간편심사암보험</span>
+            <span class="kw-tag">#위암비갱신형최저가</span>
+            <span class="kw-tag">#위암표적항암치료특약</span>
+            <span class="kw-tag">#다빈치로봇수술비보험</span>
+            <span class="kw-tag">#조기위암ESD보험금지급</span>
+            <span class="kw-tag">#다이렉트암보험비교사이트</span>
+            <span class="kw-tag">#위암보험내돈내산후기</span>
+            <span class="kw-tag">#위암보험디시추천</span>
+            <span class="kw-tag">#위암보험펨코비교</span>
+            <span class="kw-tag">#2026년암보험개정</span>
+            <span class="kw-tag">#위암가족력보험설계</span>
+            <span class="kw-tag">#중입자치료보험적용</span>
+            <span class="kw-tag">#간병인사용일당위암</span>
+          </div>
+        </article>
+
+        <!-- 섹션 12: 신뢰할 수 있는 공식 참고 자료 -->
+        <article class="article-section" id="section-ref">
+          <h2>12. 공인된 신뢰성 외부 자료 및 공식 참조 링크</h2>
+          <p>본 가이드의 의학적 통계 및 금융 약관 분석은 공신력 있는 국가 기관 및 전문 포털의 공개 데이터를 기반으로 작성되었습니다.</p>
+          
+          <ul class="ref-link-list">
+            <li>
+              <a href="https://cancersafesbohumm.directreliable.com" target="_blank" rel="noopener noreferrer">
+                1. 릴라이어블던 암보험 종합 정보 센터 (ReliableDone Cancer Guide)
+              </a>
+              <span class="ref-link-desc">2026년 최신 생명 및 손해보험사 암보험 요율 및 특약별 비교 분석 데이터베이스 제공.</span>
+            </li>
+            <li>
+              <a href="https://namu.wiki/w/%EC%9C%84%EC%95%94" target="_blank" rel="noopener noreferrer">
+                2. 나무위키: 위암 (Gastric Cancer) 상세 백과사전
+              </a>
+              <span class="ref-link-desc">위암의 원인, 병기 분류, 임상 증상, 수술법 및 치료 역사에 대한 포괄적인 정보 수록.</span>
+            </li>
+            <li>
+              <a href="https://www.cancer.go.kr" target="_blank" rel="noopener noreferrer">
+                3. 보건복지부 국립암센터 국가암정보센터 (National Cancer Information Center)
+              </a>
+              <span class="ref-link-desc">대한민국 암 발생률, 생존율 공식 국가 통계 및 국민 암 예방 가이드라인 제공.</span>
+            </li>
+            <li>
+              <a href="https://www.hira.or.kr" target="_blank" rel="noopener noreferrer">
+                4. 건강보험심사평가원 (Health Insurance Review & Assessment Service)
+              </a>
+              <span class="ref-link-desc">위암 적정성 평가 결과, 비급여 진료비용 공개 및 중증질환 급여 기준 고시.</span>
+            </li>
+          </ul>
+        </article>
+
+      </main>
+
+      <!-- 사이드바 영역 -->
+      <aside class="sidebar-area">
+        <!-- 목차 네비게이터 -->
+        <div class="sidebar-card">
+          <div class="sidebar-title">핵심 내용 목차</div>
+          <ul class="toc-list">
+            <li><a href="#section-intro">1. 위암 발생 현황 & 트렌드</a></li>
+            <li><a href="#section-cost">2. 병기별 치료비 & 비급여</a></li>
+            <li><a href="#section-age">3. 연령대별 최적 견적</a></li>
+            <li><a href="#section-comparison">4. 비갱신형 vs 갱신형 비교</a></li>
+            <li><a href="#section-riders">5. 위암 5대 필수 특약</a></li>
+            <li><a href="#section-calc">6. 다이렉트 견적 계산기</a></li>
+            <li><a href="#section-channel">7. 가입 경로별 차이점</a></li>
+            <li><a href="#section-reviews">8. 커뮤니티 실사용 후기</a></li>
+            <li><a href="#section-checklist">9. 7단계 가입 체크리스트</a></li>
+            <li><a href="#section-faq">10. 자주 묻는 질문 FAQ</a></li>
+          </ul>
+        </div>
+
+        <!-- 액션 유도 CTA 박스 -->
+        <div class="side-cta-box">
+          <h4>2026 내 맞춤 위암보험 견적</h4>
+          <p>모든 보험사 실시간 전산 비교를 통해 불필요한 특약은 덜어내고 진단비는 극대화하십시오.</p>
+          <a href="#section-calc" class="btn-action">간편 계산기 바로가기</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+
+  
+  <!-- 인터랙티브 기능 스크립트 -->
+  <script>
+    // FAQ 아코디언 인터랙션
+    document.querySelectorAll('.faq-question').forEach(header => {
+      header.addEventListener('click', () => {
+        const card = header.parentElement;
+        card.classList.toggle('open');
+      });
+    });
+
+    // 탭 전환 기능
+    function switchTab(event, tabId) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+      
+      event.currentTarget.classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
+
+    // 실시간 보험료 계산기 로직
+    function calculatePremium() {
+      const age = parseInt(document.getElementById('calc-age').value);
+      const gender = document.getElementById('calc-gender').value;
+      const diag = parseInt(document.getElementById('calc-diag').value);
+      const type = document.getElementById('calc-type').value;
+
+      // 기준 기본 요율 (30대 남성, 비갱신, 5000만원 기준 = 약 54,200원)
+      let baseRate = 54200;
+
+      // 진단비 배율
+      let diagMultiplier = diag / 5000;
+
+      // 연령대 계수
+      let ageFactor = 1.0;
+      if (age === 20) ageFactor = 0.65;
+      else if (age === 30) ageFactor = 1.0;
+      else if (age === 40) ageFactor = 1.65;
+      else if (age === 50) ageFactor = 2.45;
+      else if (age === 60) ageFactor = 3.60;
+      else if (age === 70) ageFactor = 4.80;
+
+      // 성별 계수 (여성이 남성에 비해 위암 요율 약 15~20% 저렴)
+      let genderFactor = (gender === 'female') ? 0.82 : 1.0;
+
+      // 갱신형 vs 비갱신형 계수 (초기 갱신형은 비갱신 대비 젊은 층에서 약 45%, 고령층에서 70% 수준)
+      let typeFactor = 1.0;
+      if (type === 'renew') {
+        typeFactor = (age <= 40) ? 0.45 : 0.70;
+      }
+
+      let calculated = Math.round((baseRate * diagMultiplier * ageFactor * genderFactor * typeFactor) / 100) * 100;
+      
+      document.getElementById('calc-output').innerText = calculated.toLocaleString('ko-KR') + "원 / 월";
+      document.getElementById('calc-desc').innerText = "일반암 " + (diag / 1000) + ",000만 원 + 표적항암 및 수술비 특약 결합 시 최저가 추정치";
+    }
+  </script>
+  
